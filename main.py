@@ -33,7 +33,8 @@ while True:
             with open("todos.txt", 'r') as file:
                 todos = file.readlines()
 
-            todos[number] = input("Enter the new todo: ")
+            new_todo = input("Enter the new todo: ") + '\n'
+            todos[number] = new_todo
 
             with open("todos.txt", 'w') as file:
                 file.writelines(todos)
@@ -47,7 +48,7 @@ while True:
 
             with open("todos.txt", 'w') as file:
                 file.writelines(todos)
-            
+
         case "exit":
             break
 
